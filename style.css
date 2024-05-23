@@ -1,91 +1,66 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1 {
+header{
+    background-color: ;
+    color: rgb(100, 8, 8);
+    font-size: 2vw;
     text-align: center;
-    margin-bottom: 1rem;
-  }
-  
-  #add-task-form {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-  
-  #task-input {
-    flex-grow: 1;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  #task-input:focus {
-    outline: none;
-    box-shadow: 0 0 2px 1px #007bff;
-  }
-  
-  button {
-    padding: 0.5rem 1rem;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  button:disabled {
-    background-color: #c0c0c0;
-    cursor: not-allowed;
-  }
-  
-  #task-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  #task-list li {
+}
+.container{
+    margin-left: 10vw;
     display: flex;
     align-items: center;
+}
+#varful{
+    margin-top: 2vw;
+    border-top: 1vw solid transparent;
+    border-bottom: 1vw solid transparent;
+    border-left: 2vw solid black;
+}
+
+#goal1{
+    width: 10vw;
+}
+
+#goal2{
+    width: 50vw;
+}
+#goal3{
+    margin-left: 0;
+}
+#done{
+    background-color: pink;
+    margin-top: 2vw;
+    margin-bottom: 1vw;
+    border-radius: 1vw;
+    display: flex;
+    padding-left: 1vw;
     justify-content: space-between;
-    background-color: #f9f9f9;
-    padding: 0.5rem;
-    border-radius: 4px;
-    margin-bottom: 0.5rem;
-  }
-  
-  #task-list li:last-child {
-    margin-bottom: 0;
-  }
-  
-  .remove-task-button {
-    padding: 0.25rem 0.5rem;
-    background-color: #dc3545;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .remove-task-button:hover {
-    background-color: #c02634;
+    height: 2vw;
+}
+#not_done{
+    background-color: aqua;
+    border-radius: 1vw;
+    display: flex;
+    padding-left: 1vw;
+    height: 2vw;
+    justify-content: space-between;
+}
+.goal{
+        margin-left: 1vw;
+        margin-right: 1vw;
+        margin-top: 2vw;
+        background-color: pink;
+        border-radius: 2vw;
+        height: 5vw;
+}
+#is_done{
+    text-align: center;
+    width: 10vw;
+}
+.dot{
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: 50%;
+    margin-top: 0.25vw;
+    margin-right: 0.5vw;
+    background-color: gray; /* default color */
   }
