@@ -71,6 +71,21 @@ body{
     text-align: center;
     font-size: 2vw;
 }
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Define the class that will trigger the animation */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
 
 #goal2{
     width: 50vw;

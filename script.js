@@ -9,7 +9,7 @@ document.getElementById("add-task-form").addEventListener("submit", function(eve
     if (taskInput !== "") {
         // Create the container element
         var containerDiv = document.createElement("div");
-        containerDiv.className = "container";
+        containerDiv.className = "container fade-in"; // Add the animation class
         console.log(taskInput);
         // Append the container after the form
         document.body.insertBefore(containerDiv, document.body.children[2]); // Adjust the index if needed
@@ -27,6 +27,37 @@ document.getElementById("add-task-form").addEventListener("submit", function(eve
 
         // Clear the task input
         document.getElementById("task-input").value = "";
+        void containerDiv.offsetWidth;
+
+        // Remove the animation class after the animation completes
+        setTimeout(() => {
+            containerDiv.classList.remove('fade-in');
+        }, 500);
+        var editableText = containerDiv.querySelector('.textul2');
+    editableText.addEventListener('click', function () {
+        var input = document.createElement('input');
+        input.type = 'text';
+        input.value = editableText.textContent;
+        input.className = 'edit-input';
+
+        editableText.replaceWith(input);
+        input.focus();
+
+        // Handle saving the new value
+        function saveNewValue() {
+            editableText.textContent = input.value;
+            input.replaceWith(editableText);
+        }
+
+        // Save the new value on blur (clicking outside) or pressing Enter
+        input.addEventListener('blur', saveNewValue);
+        input.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                saveNewValue();
+            }
+        });
+    });
+
     }
 });
 function changeDotColor(dot) {
