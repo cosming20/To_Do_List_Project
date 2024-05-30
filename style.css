@@ -1,5 +1,4 @@
 header{
-    background-color: ;
     color: rgb(100, 8, 8);
     font-size: 5vw;
     text-align: center;
@@ -81,7 +80,21 @@ body{
       transform: translateY(0);
   }
 }
+.done {
+  /* background-color: lightgreen; */
+}
 
+.not-done {
+  /* background-color: lightcoral; */
+}
+
+.task-status {
+  cursor: pointer;
+}
+
+.edit-input {
+  width: 100%;
+}
 /* Define the class that will trigger the animation */
 .fade-in {
   animation: fadeIn 0.5s ease-in-out;
@@ -127,6 +140,7 @@ body{
 .dot{
     width: 1.5vw;
     height: 1.5vw;
+    text-align: center;
     border-radius: 50%;
     margin-top: 0.25vw;
     margin-right: 0.5vw;
@@ -169,4 +183,8 @@ body{
     background-color: #c0c0c0;
     cursor: not-allowed;
   }
-  
+  .hidden {
+
+    visibility: hidden;
+
+  }
